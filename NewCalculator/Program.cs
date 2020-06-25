@@ -44,13 +44,13 @@ namespace NewCalculator
 
                 //Ask the user for which operator they want to use:
                 Console.WriteLine("-----------------------------\n");
-                Console.WriteLine("Alright! Now, choose an operator from this list:"):
+                Console.WriteLine("Alright! Now, choose an operator from this list:");
                 Console.WriteLine("\ta - Add");
                 Console.WriteLine("\ts - Subtract");
                 Console.WriteLine("\tm - Multiply");
                 Console.WriteLine("\td - Divide");
                 Console.WriteLine("\to - Modulus");
-                Console.Write("Which one do you choose?"):
+                Console.Write("Which one do you choose? ");
 
                 string op = Console.ReadLine();
 
