@@ -45,9 +45,20 @@ namespace NewCalculator
                     Console.WriteLine($"Your product: {num1} * {num2} = " + (num1 * num2));
                     break;
                 case "d":
+                    //Ask user to enter a nonzero divisor until they comply
+                    while(num2 == 0)
+                    {
+                        Console.WriteLine("I can't divide by zero. Pick another number, please:");
+                        num2 = Convert.ToDouble(Console.ReadLine());
+                    }
                     Console.WriteLine($"Your quotient: {num1} / {num2} = " + (num1 / num2));
                     break;
                 case "o":
+                    while (num2 == 0)
+                    {
+                        Console.WriteLine("I can't divide by zero. Pick another number, please:");
+                        num2 = Convert.ToDouble(Console.ReadLine());
+                    }
                     Console.WriteLine($"Your remainder: {num1} % {num2} = " + (num1 % num2));
                     break;
             }
