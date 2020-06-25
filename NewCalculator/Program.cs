@@ -7,23 +7,25 @@ namespace NewCalculator
         static void Main(string[] args)
         {
             // Declare our variables and initialize to 0:
-            int num1 = 0; int num2 = 0;
+            double num1 = 0; double num2 = 0;
 
             //Display title of the console app:
             Console.WriteLine("Brett's C# Console Calculator\r");
             Console.WriteLine("-----------------------------\n");
 
             //Ask user to type their first number:
-            Console.WriteLine("Enter a whole number here (no decimals), then press Enter:");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter your first number here, then press Enter:");
+            num1 = Convert.ToDouble(Console.ReadLine());
 
             //Ask user for the second number:
-            Console.WriteLine($"Your first number is {num1}. What's your second whole number?");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Your first number is {num1}. What's your second number?");
+            num2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("----------------------");
 
             //Now, we ask the user to pick an operand:
             Console.WriteLine($"Okay, I've got {num1} and {num2} lined up.");
             Console.WriteLine("Now, select which calculation you want to do:");
+
             Console.WriteLine("\ta - Add");
             Console.WriteLine("\ts - Subtract");
             Console.WriteLine("\tm - Multiply");
