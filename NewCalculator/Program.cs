@@ -14,12 +14,46 @@ namespace NewCalculator
             Console.WriteLine("-----------------------------\n");
 
             //Ask user to type their first number:
-            Console.WriteLine("Enter a number here, then press Enter:");
+            Console.WriteLine("Enter a whole number here (no decimals), then press Enter:");
             num1 = Convert.ToInt32(Console.ReadLine());
 
             //Ask user for the second number:
-            Console.WriteLine($"Your first number is {num1}. What's your second number?");
+            Console.WriteLine($"Your first number is {num1}. What's your second whole number?");
             num2 = Convert.ToInt32(Console.ReadLine());
+
+            //Now, we ask the user to pick an operand:
+            Console.WriteLine($"Okay, I've got {num1} and {num2} lined up.");
+            Console.WriteLine("Now, select which calculation you want to do:");
+            Console.WriteLine("\ta - Add");
+            Console.WriteLine("\ts - Subtract");
+            Console.WriteLine("\tm - Multiply");
+            Console.WriteLine("\td - Divide");
+            Console.WriteLine("\to - Modulus");
+
+            //This switch statement will do the math for us:
+            switch (Console.ReadLine())
+            {
+                case "a":
+                    Console.WriteLine($"Your sum: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "s":
+                    Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"Your product: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "d":
+                    Console.WriteLine($"Your quotient: {num1} / {num2} = " + (num1 / num2));
+                    break;
+                case "o":
+                    Console.WriteLine($"Your remainder: {num1} % {num2} = " + (num1 % num2));
+                    break;
+            }
+
+            //Finally, let the user respond to the console before ending the program
+            Console.WriteLine("------------------");
+            Console.Write("Excellent! Press any key to close the C# Console Calculator app.");
+            Console.ReadKey();
         }
     }
 }
